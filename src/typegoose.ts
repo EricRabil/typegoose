@@ -2,10 +2,12 @@ import 'reflect-metadata';
 import * as mongoose from 'mongoose';
 import * as _ from 'lodash';
 
-import { schema, models, methods, virtuals, hooks, plugins, constructors } from './data';
+import { schema, models, specs, methods, virtuals, hooks, plugins, constructors } from './data';
 
 export * from './method';
 export * from './prop';
+export * from './schema';
+export * from './index';
 export * from './hooks';
 export * from './plugin';
 export { getClassForDocument } from './utils';
@@ -17,6 +19,10 @@ export interface GetModelForClassOptions {
   existingMongoose?: mongoose.Mongoose;
   schemaOptions?: mongoose.SchemaOptions;
   existingConnection?: mongoose.Connection;
+}
+
+export class TypegooseFactory {
+// Do it as a factory  
 }
 
 export class Typegoose {
